@@ -1,5 +1,22 @@
 function toggleMenu() {
-  document.getElementById('nav').classList.toggle('open');
+  console.log('Menu toggle button clicked');
+  const nav = document.getElementById('nav');
+  if (!nav) {
+    console.error('Navigation element not found');
+    return;
+  }
+  console.log('Toggling navigation class "open"');
+  nav.classList.toggle('open');
+  
+  console.log(`Navigation class "open" is now ${nav.classList.contains('open') ? 'enabled' : 'disabled'}`);
+  // Toggle the open class on the nav element
+  console.log('Menu toggled');
+  console.log('Toggling menu visibility');
+  console.log('Menu visibility toggled');
+  console.log('Menu toggle function executed');
+  console.log('Menu toggle function completed');
+  // Toggle the open class on the nav element
+//cument.getElementById('nav').classList.toggle('open');
 }
 
 function loadContent(key) {
@@ -43,8 +60,6 @@ function loadContent(key) {
   <li>ハイエース2台なら石川・近内が運転（普通免許可）</li>
   <li>ルート：外環→八王子経由→秩父（関越より早い）</li>
   <li>バス案の場合はGoogleマップでのルートを提出</li>
-  <li>バス案では、20～28, 
-
 </ul>
 
 <h3>■ペット</h3>
@@ -79,14 +94,14 @@ function loadContent(key) {
   <li>口コミ中心</li>
   <li>メンバーリストは近内が管理</li>
   <li>参加希望者は石川・濱田・近内まで</li>
-</ul>
-      `,
+</ul> `,
     mtg2: '<h2>第2回打合せ</h2><p>予定です</p>',
     preview: '<h2>下見</h2><p>2025年8月13〜14日予定</p>',
     maintrip: '<h2>本番</h2><p>2025年9月13〜14日開催予定</p>'
   };
+
   document.getElementById('content').innerHTML = contentData[key] || '<h2>準備中です</h2>';
-console.log(`Content loaded for key: ${key}`);
+  console.log(`Content loaded for key: ${key}`);
 
 
   document.getElementById('nav').classList.toggle('open');
