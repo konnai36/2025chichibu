@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>2025 けやきが丘ワクワク旅行</title>
+  <style>
+    body {
+      font-family: "Segoe UI", "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+      margin: 0;
+      background-color: #f4f4f4;
+    }
+    header {
+      background-color: #2b6cb0;
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1rem;
+    }
+    .menu-toggle {
+      font-size: 1.5rem;
+      background: none;
+      border: none;
+      color: white;
+      cursor: pointer;
+      display: block;
+    }
+    .title {
+      margin: 0;
+      font-size: 1.2rem;
+    }
+    nav {
+      background: #2b6cb0;
+      position: fixed;
+      top: 0;
+      left: -250px;
+      width: 250px;
+      height: 100%;
+      overflow-y: auto;
+      transition: left 0.3s;
+      padding-top: 4rem;
+      z-index: 999;
+    }
+    nav.open {
+      left: 0;
+    }
+    nav a {
+      display: block;
+      padding: 1rem;
+      color: #fff;
+      text-decoration: none;
+      border-bottom: 1px solid #1a4c80;
+    }
+    nav a:hover {
+      background: #1a4c80;
+    }
+    .container {
+      margin-left: 0;
+      padding: 1rem;
+      max-width: 900px;
+      margin: auto;
+    }
+    section {
+      background: #fff;
+      padding: 1.5rem;
+      margin-bottom: 2rem;
+      border-radius: 8px;
+      box-shadow: 0 0 5px rgba(0,0,0,0.1);
+    }
+    h2 {
+      color: #2b6cb0;
+      border-left: 5px solid #2b6cb0;
+      padding-left: 0.5rem;
+    }
+    footer {
+      background: #2b6cb0;
+      color: white;
+      text-align: center;
+      padding: 1rem;
+      font-size: 0.9rem;
+    }
+    @media (min-width: 600px) {
+      .menu-toggle {
+        display: none;
+      }
+      nav {
+        position: static;
+        width: auto;
+        height: auto;
+        background: none;
+        padding-top: 0;
+        display: flex;
+        flex-wrap: wrap;
+        left: 0 !important;
+      }
+      nav a {
+        color: #2b6cb0;
+        border: none;
+        padding: 0.5rem 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1 class="title">2025 けやきが丘ワクワク旅行</h1>
+    <button class="menu-toggle" onclick="document.querySelector('nav').classList.toggle('open')">☰</button>
+  </header>
+  <nav>
+    <a href="#mtg1">1. 第1回打合せ（2025/6/6）</a>
+    <a href="#mtg2">2. 第2回打合せ（XXXX）</a>
+    <a href="#mtg3">3. 第3回打合せ（XXXX）</a>
+    <a href="#mtg4">4. 第4回打合せ（XXXX）</a>
+    <a href="#mtg5">5. 第5回打合せ（XXXX）</a>
+    <a href="#mtg6">6. 第6回打合せ（XXXX）</a>
+    <a href="#preview">7. 下見（2025/8/13,14）</a>
+    <a href="#maintrip">8. 本番（2025/9/13,14）</a>
+    <a href="#reference">9. 参考資料</a>
+  </nav>
+  <div class="container">
+    <!-- 各 section はそのまま残しておく -->
+  </div>
+  <footer>
+    © 2025 けやきが丘ワクワク旅行計画チーム - All rights reserved.
+  </footer>
+  <script>
+    document.querySelectorAll('nav a').forEach(link => {
+      link.addEventListener('click', () => {
+        document.querySelector('nav').classList.remove('open');
+      });
+    });
+  </script>
+</body>
+</html>
