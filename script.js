@@ -90,6 +90,7 @@ function loadContent(key) {
     <li>愛護会や引退記念などの冠は付けない</li>
     <li>誰でも参加OKの仲良し旅行</li>
     <li>初参加や関係の薄い方は一応相談制</li>
+    <li>子供や学生は無料</li>
   </ul>
 </section>
 
